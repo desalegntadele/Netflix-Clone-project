@@ -1,0 +1,71 @@
+.footer-wrapper {
+    background-color: #141414; /* Dark background */
+    color: white; /* White text color */
+    padding: 40px 20px; /* Padding around the footer */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.footer-container {
+    max-width: 1200px; /* Max width for larger screens */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center items */
+}
+
+.footer-icons {
+    display: flex; /* Flexbox layout for icons */
+    margin-bottom: 20px; /* Space below icons */
+}
+
+.footer-icons svg {
+    margin: 0 8px; /* Space between icons */
+    fill: white; /* Icon color */
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+    transition: fill 0.3s; /* Smooth color transition */
+}
+
+.footer-icons svg:hover {
+    fill: #e50914; /* Change color on hover */
+}
+
+.footer_data {
+    display: flex; /* Flexbox layout for data sections */
+    justify-content: space-between; /* Space between sections */
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space below data */
+}
+
+.footer_data div {
+    display: flex; /* Flexbox layout for each column */
+    flex-direction: column; /* Stack list items vertically */
+    margin: 0 0px; /* Decrease space between columns */
+}
+
+.footer_data ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.footer_data li {
+    margin: 3px 0; /* Space between list items */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer_data li:hover {
+    color: #e50914; /* Change color on hover */
+}
+
+.service_code {
+    margin-bottom: 20px; /* Space below service code */
+}
+
+.copy-write {
+    font-size: 14px; /* Smaller font size */
+    text-align: center; /* Center text */
+}

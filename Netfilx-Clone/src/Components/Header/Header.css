@@ -1,0 +1,75 @@
+.logo{
+    width: 50px;
+    height: auto;
+}
+
+.header-wrapper {
+    background-color: black; 
+    padding: 20px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.header_container {
+    display: flex; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 ; 
+    margin-left: 100px;
+}
+
+.header-left {
+    display: flex; 
+    align-items: center;
+    
+}
+
+.header-left ul {
+    list-style: none; 
+    display: flex; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.header-left li {
+    margin-right: 30px;
+    color: white; 
+    cursor: pointer; 
+    transition: color 0.3s; 
+}
+
+.header-left li:hover {
+    color: #e50914; 
+}
+
+.header-left li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+.header_right {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    margin-left: 260px;
+}
+
+.header_right ul {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Horizontal list */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+.header_right li {
+    margin-left: 20px; /* Space between icons */
+    color: white; /* Icon color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.header_right li:hover {
+    color: #e50914; /* Change color on hover */
+}
+
+.header_right li:last-child {
+    margin-right: 30px; /* Remove margin from the last item */
+}
