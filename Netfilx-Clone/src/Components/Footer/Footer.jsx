@@ -12,7 +12,9 @@ const Footer = () => {
           <InstagramIcon/>
           <YouTubeIcon/>
         </div>
+        
         <div className="footer_data">
+          
           <div>
             <ul>
               <li>Audio Description</li>

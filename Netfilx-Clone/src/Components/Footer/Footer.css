@@ -37,6 +37,7 @@
     justify-content: space-between; /* Space between sections */
     width: 100%; /* Full width */
     margin-bottom: 20px; /* Space below data */
+    color: white;
 }
 
 .footer_data div {
