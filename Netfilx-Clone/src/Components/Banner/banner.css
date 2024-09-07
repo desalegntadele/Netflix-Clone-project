@@ -1,4 +1,4 @@
-.banner{
+/* .banner{
     margin-top: 10vh;
     margin-bottom: 80px;
     height: 80vh;
@@ -23,7 +23,7 @@
     max-width: w 360px;
     height: 80px;
 }
-.banner_button{
+.banner_button {
     cursor: pointer;
     color: #fff;
     outline: none;
@@ -31,12 +31,14 @@
     font-size: 1.2rem;
     font-weight: 700;
     border-radius: 00.2vw;
-    padding: 1rem 3rem;
+    padding: 15rem 9rem;
     border-color: rgba(51,51,51,0.5);
 }
-.play{
+.banner_button-paly{
     color: #000;
     background-color: #fff;
+    margin-top: 100px;
+  
 }
 .bannner_button:hover{
     color: #000;
@@ -47,4 +49,64 @@
     height: 40vh;
     background-image: linear-gradient(180deg,transparent,rgb(37,37,37,0.91),#111
     );
+} */
+
+.banner {
+    position: relative;
+    color: white;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.banner_contents {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    max-width: 500px; /* Limit the width of content */
+}
+
+.baner_title {
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.banner_buttons {
+    margin: 20px 0;
+}
+
+.banner_button-play, .banner_button {
+    background-color: red; /* Netflix button color */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.banner_button-play:hover, .banner_button:hover {
+    background-color: darkred; /* Darker shade on hover */
+}
+
+.banner_description {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    max-width: 400px; /* Limit the description width */
 }

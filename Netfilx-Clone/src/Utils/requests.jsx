@@ -1,11 +1,10 @@
-import React from 'react'
+
 //let API_KEY=5f9f00a92c71f58231e9af40a56079e8;
-//     --url 'https://api.themoviedb.org/3/genre/movie/list?api_key=5f9f00a92c71f58231e9af40a56079e8&language=en' \
-
-
-const API_KEY=process.env.REACT_APP_API_KEY;
+//-url 'https://api.themoviedb.org/3/genre/movie/list?api_key=5f9f00a92c71f58231e9af40a56079e8&language=en' \
+const API_KEY = '5f9f00a92c71f58231e9af40a56079e8';
 const requests =  {
-    fetchAction:`/discover/movie?api_key=${API_KEY}&with_genres=28`,
+fetchNetflixOriginals: `/discover/movie?api_key=${API_KEY}&with_networks=213`,
+fetchAction:`/discover/movie?api_key=${API_KEY}&with_genres=28`,
  fetchAdventure:`/discover/movie?api_key=${API_KEY}&with_genres=12`,
  fetchAnimation:`/discover/movie?api_key=${API_KEY}&with_genres=16`,
  fetchComedy:`/discover/movie?api_key=${API_KEY}&with_genres=35`,
@@ -24,8 +23,7 @@ const requests =  {
  fetchThriller:`/discover/movie?api_key=${API_KEY}&with_genres=53`,
  fetchWar:`/discover/movie?api_key=${API_KEY}&with_genres=10752`,
  fetchWesternr:`/discover/movie?api_key=${API_KEY}&with_genres=37`,
- 
- 
+
 }
 
 export default requests
