@@ -17,7 +17,8 @@
 
 .footer-icons {
     display: flex; /* Flexbox layout for icons */
-    margin-bottom: 20px; /* Space below icons */
+    margin-bottom: 20px;
+     margin-left: -850px;
 }
 
 .footer-icons svg {
@@ -35,7 +36,7 @@
 .footer_data {
     display: flex; /* Flexbox layout for data sections */
     justify-content: space-between; /* Space between sections */
-    width: 100%; /* Full width */
+    width: 80%; /* Full width */
     margin-bottom: 20px; /* Space below data */
     color: white;
 }
@@ -53,7 +54,7 @@
 }
 
 .footer_data li {
-    margin: 3px 0; /* Space between list items */
+    margin: 4px 0; /* Space between list items */
     cursor: pointer; /* Pointer cursor on hover */
     transition: color 0.3s; /* Smooth color transition */
 }
@@ -62,8 +63,15 @@
     color: #e50914; /* Change color on hover */
 }
 
-.service_code {
-    margin-bottom: 20px; /* Space below service code */
+.servvice_code {
+    /* margin-bottom: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #fff 1px solid;
+    color: #fff;
+    margin: 10px 0;
+     /* Space below service code */
 }
 
 .copy-write {

@@ -1,16 +1,19 @@
+
 import React, { useEffect, useState } from 'react'
 import './Row.css'
-import axios from 'axios';
-
+import axios from "../../../Utils/axios";
+import movieTrailer from 'movie-trailer';
+import YouTube from 'react-youtube';
+console.log(movieTrailer);
 const Row = ({title,fetchUrl,islargeRow}) => {
-    let[movies,setMovie]=useState("");
+    let[movies,setMovie]=useState([]);
     let[trailUrl,setTrailUrl]=useState("");
     let base_url="https://image.tmdb.org/t/p/original";
     useEffect(()=>{
         (async()=>{
             try{
                 console.log(fetchUrl);;
-                let request=await axios.get(`https://localhost:4000/api/${fetchUrl}`);
+                let request=await axios.get(fetchUrl);
                 console.log(request);
                 setMovie(request.data.results);
                 
@@ -21,18 +24,24 @@ const Row = ({title,fetchUrl,islargeRow}) => {
             }
         })()
     },[fetchUrl]);
-    let handleClick=(movie)=>{
-        if(trailUrl){
-            setTrailUrl('')
-        }else{
-            movieTrailer(movie?.title||movie?.name||movie?.original_name)
-            .then((url)=>{
-                console.log(url);
-                let urlparams=new URLsearchparams(newURL(url).search)
-                console.log(urlparams);
-                console.log(urlparams.get('v'));
-                setTrailUrl(urlparams.get('v'))
+    
+const handleClick = (movie) => {
+    if (trailUrl) {
+        setTrailUrl('');
+    } else {
+        movieTrailer(movie?.title || movie?.name || movie?.original_name)
+            .then((url) => {
+                let urlParams = new URLSearchParams(new URL(url).search);
+                setTrailUrl(urlParams.get('v'));
             })
+            .catch((error) => console.error("Trailer not found", error));
+    }
+};
+    let opts={
+        height:'390',
+        width:"100%",
+        palayerVar:{
+        autoplay:1,
         }
     }
   return (
@@ -40,11 +49,14 @@ const Row = ({title,fetchUrl,islargeRow}) => {
         <h1>{title}</h1>
         <div className='row_posters'>
             {movies?.map((movie,index)=>(
-                <img onClick={()=>handleClick(movie)}
-                key={index} src={`${base_url}${islargeRow?movie.poster_path:movie.backdrop_path}`}alt={movie.name} className={`row_poster`$(islargeRow &&"row_posterlarge")}/>
-            ))}
+                <img 
+                onClick={()=>handleClick(movie)}
+                key={index} src={`${base_url}${islargeRow?movie.poster_path:movie.backdrop_path}`}alt={movie.name} className={`row_poster ${islargeRow &&"row_posterlarge"}`}/>
+            ))};
         </div>
-        
+        <div style={{padding:'10px'}}>
+        {trailUrl &&<YouTube videoid={trailUrl} opts={opts}/>}
+       </div>
     </div>
   )
 }
