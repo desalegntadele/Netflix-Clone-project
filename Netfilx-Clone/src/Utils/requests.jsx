@@ -1,7 +1,8 @@
 
 //let API_KEY=5f9f00a92c71f58231e9af40a56079e8;
-//-url 'https://api.themoviedb.org/3/genre/movie/list?api_key=5f9f00a92c71f58231e9af40a56079e8&language=en' \
-const API_KEY = '5f9f00a92c71f58231e9af40a56079e8';
+// imgbaseurl=  "base_url": "http://image.tmdb.org/t/p/",
+//-url 'https://api.themoviedb.org/3/discover/movie?api_key=5f9f00a92c71f58231e9af40a56079e8&with_genres=99' \
+const API_KEY='5f9f00a92c71f58231e9af40a56079e8';
 const requests =  {
 fetchNetflixOriginals: `/discover/movie?api_key=${API_KEY}&with_networks=213`,
 fetchAction:`/discover/movie?api_key=${API_KEY}&with_genres=28`,
@@ -23,7 +24,5 @@ fetchAction:`/discover/movie?api_key=${API_KEY}&with_genres=28`,
  fetchThriller:`/discover/movie?api_key=${API_KEY}&with_genres=53`,
  fetchWar:`/discover/movie?api_key=${API_KEY}&with_genres=10752`,
  fetchWesternr:`/discover/movie?api_key=${API_KEY}&with_genres=37`,
-
 }
-
-export default requests
+export default requests;

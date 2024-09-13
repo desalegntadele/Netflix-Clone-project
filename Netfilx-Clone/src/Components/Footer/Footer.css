@@ -18,7 +18,7 @@
 .footer-icons {
     display: flex; /* Flexbox layout for icons */
     margin-bottom: 20px;
-     margin-left: -850px;
+    margin-left: -850px;
 }
 
 .footer-icons svg {
@@ -34,17 +34,17 @@
 }
 
 .footer_data {
-    display: flex; /* Flexbox layout for data sections */
-    justify-content: space-between; /* Space between sections */
-    width: 80%; /* Full width */
-    margin-bottom: 20px; /* Space below data */
-    color: white;
+display: flex; /* Flexbox layout for data sections */
+justify-content: space-between; /* Space between sections */
+width: 80%; /* Full width */
+margin-bottom: 20px; /* Space below data */
+color: white;
 }
 
 .footer_data div {
-    display: flex; /* Flexbox layout for each column */
-    flex-direction: column; /* Stack list items vertically */
-    margin: 0 0px; /* Decrease space between columns */
+display: flex; /* Flexbox layout for each column */
+flex-direction: column; /* Stack list items vertically */
+margin: 0 0px; /* Decrease space between columns */
 }
 
 .footer_data ul {
@@ -54,12 +54,15 @@
 }
 
 .footer_data li {
-    margin: 4px 0; /* Space between list items */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: color 0.3s; /* Smooth color transition */
+    margin: 4px 0; 
+    /* Space between list items */
+    cursor: pointer; 
+    /* Pointer cursor on hover */
+    transition: color 0.3s; 
+    /* Smooth color transition */
 }
 
-.footer_data li:hover {
+.footer_data li:hover{
     color: #e50914; /* Change color on hover */
 }
 
@@ -71,10 +74,10 @@
     border: #fff 1px solid;
     color: #fff;
     margin: 10px 0;
-     /* Space below service code */
 }
 
 .copy-write {
     font-size: 14px; /* Smaller font size */
     text-align: center; /* Center text */
+    color: #fff;
 }
