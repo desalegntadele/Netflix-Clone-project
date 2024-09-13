@@ -7,7 +7,7 @@ import YouTube from 'react-youtube';
 // console.log(movieTrailer);
 let Row = ({title,fetchUrl,islargeRow}) => {
     let [movies,setMovie]=useState([]);
-    let [trailUrl,setTrailUrl]=useState("");
+    let [trailUrl,setTrailUrl]=useState(null);
     let base_url="https://image.tmdb.org/t/p/original";
     useEffect(()=>{
         (async()=>{
@@ -27,7 +27,7 @@ let Row = ({title,fetchUrl,islargeRow}) => {
     
 const handleClick = (movie) => {
     if (trailUrl) {
-        setTrailUrl('');
+        setTrailUrl(null);
     } else {
         //The ?. (optional chaining) operator is used to safely access the title, name, or original_name properties.
         movieTrailer(movie?.title || movie?.name || movie?.original_name)
@@ -43,10 +43,12 @@ const handleClick = (movie) => {
     let opts={
         height:'390',
         width:"100%",
-        palayerVar:{
+        playerVars:{
         autoplay:1,
         }
     }
+    console.log(trailUrl);
+    
   return (
     <div className='row'>
         <h1>{title}</h1>
@@ -61,7 +63,7 @@ const handleClick = (movie) => {
             ))};
         </div>
         <div style={{padding:'10px'}}>
-        {trailUrl &&<YouTube videoid={trailUrl} opts={opts}/>}
+        {trailUrl &&<YouTube videoId={trailUrl} opts={opts}/>}
        </div>
     </div>
   )

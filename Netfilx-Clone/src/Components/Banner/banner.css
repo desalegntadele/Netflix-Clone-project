@@ -1,5 +1,6 @@
 .banner {
     position: relative;
+    
     color: white;
     height: 600px; /* Adjust height as needed */
     display: flex;
@@ -40,28 +41,27 @@
 
 .banner_button,
 .banner_button-paly {
-    /* background-color: transparent; */
      /* Transparent background */
-    border: 2px solid white; /* White border */
-    color: white; /* White text color */
-    padding: 10px 20px; /* Padding for visual appeal */
-    font-size: 16px; /* Font size */
-    flex: 1; /* Equal size */
-    text-align: center; /* Center text */
-    /* background-color: white;
-    color: black; */
+    border: 2px solid white; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    flex: 1; 
+    text-align: center; 
+   /* background-color: white;
+    color: black;  */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .banner_button:hover,
 .banner_button-paly:hover {
-    background-color: red; /* Change background on hover */
-    color: black; /* Change text color on hover */
-    cursor: pointer; /* Pointer cursor on hover */
+    background-color: red; 
+    color: black; 
+    cursor: pointer; 
 }
 
 .banner_description {
     font-size: 1.2rem;
     line-height: 1.4;
-    max-width: 400px; /* Limit the description width */
+    max-width: 400px; 
 }
